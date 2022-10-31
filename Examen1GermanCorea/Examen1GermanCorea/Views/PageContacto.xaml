@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen1GermanCorea.Views.PageContacto">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtnombre" Placeholder="Ingrese el nombre" Keyboard="Text" />
+
+            <Entry x:Name="txtapellido" Placeholder="Ingrese el apellido" Keyboard="Text" />
+
+            <Entry x:Name="txtedad" Placeholder="Ingrese su edad" Keyboard="Telephone" />
+
+            <Picker Title="Seleccione pais"
+                  x:Name="pikpais">
+                <Picker.Items>
+                    <x:String>Honduras</x:String>
+                    <x:String>Panama</x:String>
+                    <x:String>Belicea</x:String>
+                    <x:String>Salvador</x:String>
+                    <x:String>Costa Rica</x:String>
+                    <x:String>Guatemal</x:String>
+                </Picker.Items>
+            </Picker>
+            
+            <Entry x:Name="txtnota" Placeholder="Ingrese una nota" Keyboard="Text" />
+
+            <Button x:Name="btnagregar" Text="Salvar" Clicked="btnagregar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
