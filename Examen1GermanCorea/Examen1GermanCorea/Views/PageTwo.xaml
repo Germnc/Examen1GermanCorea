@@ -1,36 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Examen1GermanCorea.Views.PageTwo">
+             x:Class="Examen1GermanCorea.Views.PageTwo" Title="Personas Registradas">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding Nombre}"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" TextColor="#00FFFB"/>
 
             <Label Text="{Binding Apellidos}"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" TextColor="#00FFFB"/>
 
             <Label Text="{Binding Edad}"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" TextColor="#00FFFB"/>
 
             <Label Text="{Binding Pais}"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" TextColor="#00FFFB"/>
 
             <Label Text="{Binding Nota}"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" TextColor="#00FFFB"/>
 
             <Label Text="{Binding Latitud}"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" TextColor="#00FFFB"/>
 
             <Label Text="{Binding Longitud}"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" TextColor="#00FFFB"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -15,25 +15,55 @@ namespace Examen1GermanCorea.Views
         public PageContacto()
         {
             InitializeComponent();
+         
         }
 
-        
+        private void limpiar()
+        {
+            txtnombre.Text = "";
+            txtapellido.Text = "";
+            txtedad.Text = "";
+            txtnota.Text = "";
+            
+        }
 
         private async void btnagregar_Clicked(object sender, EventArgs e)
         {
-            var contactos = new Models.Contactos
+            if (!string.IsNullOrEmpty(txtnombre.Text) &&
+                !string.IsNullOrEmpty(txtapellido.Text) &&
+                !string.IsNullOrEmpty(txtedad.Text) &&
+                !string.IsNullOrEmpty(txtnota.Text))
             {
-                Nombre = txtnombre.Text,
-                Apellidos = txtapellido.Text,
-                Edad = Convert.ToInt32(txtedad.Text),
-                Pais = pikpais.SelectedItem as string,
-                Nota = txtnota.Text,
+
+                
+                var contactos = new Models.Contactos
+                {
+                    Nombre = txtnombre.Text,
+                    Apellidos = txtapellido.Text,
+                    Edad = Convert.ToInt32(txtedad.Text),
+                    Pais = pikpais.SelectedItem as string,
+                    Nota = txtnota.Text,
+
+                    
             };
+                limpiar();
 
-            if (await App.dbcontac.Storecontacto(contactos) > 0)
-                await DisplayAlert("Aviso", "Registro Ingresado con exito !!", "OK");
+                if (await App.dbcontac.Storecontacto(contactos) > 0)
+                    await DisplayAlert("Aviso", "Registro Ingresado con exito !!", "OK");
 
-            
+                
+            }
+            else
+            {
+               await DisplayAlert("Datos erróneos",
+                    "Por favor, llena toda la información",
+                    "Ok");
+            }
+
+
+
+
+
 
         }
     }

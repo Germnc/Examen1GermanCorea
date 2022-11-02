@@ -1,30 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Examen1GermanCorea.Views.PageContacto">
+             x:Class="Examen1GermanCorea.Views.PageContacto" Title="Examen German Corea"
+             Background="#000033">
     <ContentPage.Content>
         <StackLayout>
-            <Entry x:Name="txtnombre" Placeholder="Ingrese el nombre" Keyboard="Text" />
+            <Entry x:Name="txtnombre" Placeholder="Ingrese el nombre" Keyboard="Text" TextColor="#FF7043" FontSize="Title"/>
 
-            <Entry x:Name="txtapellido" Placeholder="Ingrese el apellido" Keyboard="Text" />
+            <Entry x:Name="txtapellido" Placeholder="Ingrese el apellido" Keyboard="Text" TextColor="#FF7043" FontSize="Title"/>
 
-            <Entry x:Name="txtedad" Placeholder="Ingrese su edad" Keyboard="Telephone" />
+            <Entry x:Name="txtedad" Placeholder="Ingrese su edad" Keyboard="Telephone" TextColor="#FF7043" FontSize="Title"/>
 
-            <Picker Title="Seleccione pais"
+            <Picker Title="Seleccione pais" FontSize="Title" TextColor="#FF7043"
                   x:Name="pikpais">
                 <Picker.Items>
                     <x:String>Honduras</x:String>
                     <x:String>Panama</x:String>
-                    <x:String>Belicea</x:String>
+                    <x:String>Belice</x:String>
                     <x:String>Salvador</x:String>
                     <x:String>Costa Rica</x:String>
-                    <x:String>Guatemal</x:String>
+                    <x:String>Guatemala</x:String>
                 </Picker.Items>
             </Picker>
-            
-            <Entry x:Name="txtnota" Placeholder="Ingrese una nota" Keyboard="Text" />
 
-            <Button x:Name="btnagregar" Text="Salvar" Clicked="btnagregar_Clicked"/>
+            <Entry x:Name="txtnota" Placeholder="Ingrese una nota" Keyboard="Text" TextColor="#FF7043" FontSize="Title"/>
+
+            <Button x:Name="btnagregar" Text="Salvar" Clicked="btnagregar_Clicked" TextColor="#00FF66" FontSize="Title"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
